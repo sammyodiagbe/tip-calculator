@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tip-container">
+        <img src="./assets/logo.svg" alt="logo" class="logo" />
+        <div class="splitter">
+          <section class="container-left">
+            <label class="input-label">Bill</label>
+            <div class="input-container">
+              <img src="./assets/icon-dollar.svg" class="input-icon" />
+              <input type="text" id="bill-input" class="bill-input" />
+            </div>
+
+            <label class="input-label sl">Select Tip %</label>
+            <div class="tip-percent-container">
+              <button href="#" data-value="5" class="percent">5%</button>
+              <button href="#" data-value="10" class="percent">10%</button>
+              <button href="#" data-value="15" class="percent">15%</button>
+              <button href="#" data-value="20" class="percent">20%</button>
+              <button href="#" data-value="25" class="percent">25%</button>
+              <button href="#" class="custom">custom</button>
+            </div>
+            <label class="input-label">Number of People</label>
+            <div class="input-container">
+              <img src="./assets/icon-person.svg" class="input-icon" />
+              <input type="text" id="people-input" class="bill-input" />
+            </div>
+          </section>
+          <section class="container-right">
+            <div class="flex">
+              <div class="flex-left">
+                <h5>Tip Amount</h5>
+                <h6>/ person</h6>
+              </div>
+              <h1 class="amount" id="tip-amount">$4.25</h1>
+            </div>
+            <div class="flex">
+              <div class="flex-left">
+                <h5>Total</h5>
+                <h6>/ person</h6>
+              </div>
+              <h1 class="amount" id="tip-amount">$32.79</h1>
+            </div>
+            <div class="reset-container">
+              <button class="reset" id="reset">Reset</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
