@@ -72,15 +72,16 @@ div.container div.tip-container div.splitter section.container-left div.input-co
           flex: 1;
   max-width: 100%;
   background: transparent;
-  padding: 12px 0;
+  padding: 10px 0;
   text-align: right;
   font-weight: 700;
   font-size: 20px;
   color: #00494d;
+  border-radius: 5px;
 }
 
 div.container div.tip-container div.splitter section.container-left div.tip-percent-container {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -115,7 +116,7 @@ div.container div.tip-container div.splitter section.container-right {
 }
 
 div.container div.tip-container div.splitter section.container-right div.flex {
-  padding: 15px 0;
+  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +138,7 @@ div.container div.tip-container div.splitter section.container-right div.flex h6
 }
 
 div.container div.tip-container div.splitter section.container-right div.reset-container button.reset {
-  padding: 12px;
+  padding: 10px;
   font-size: 16px;
   display: block;
   width: 100%;
@@ -158,7 +159,7 @@ div.container div.tip-container div.splitter section.container-right div.reset-c
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   div.container div.tip-container div.splitter {
     display: -ms-grid;
@@ -171,6 +172,9 @@ div.container div.tip-container div.splitter section.container-right div.reset-c
   div.container div.tip-container div.splitter section.container-left div.tip-percent-container {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+  }
+  div.container div.tip-container div.splitter section.container-right {
+    position: relative;
   }
 }
 /*# sourceMappingURL=style.css.map */
