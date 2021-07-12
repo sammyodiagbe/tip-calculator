@@ -46,7 +46,7 @@ div.container {
         label.input-label {
           display: block;
           font-size: 14px;
-          padding: 20px 0;
+          padding: 12px 0;
           font-weight: 700;
           color: $dark-greyish-cyan;
           &.sl {
@@ -55,19 +55,19 @@ div.container {
         }
 
         div.input-container {
-          background: $light-greyish-cyan;
+          background: #efefef;
           display: flex;
           align-items: center;
           padding: 0 15px;
           padding-right: 30px;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           img.input-icon {
           }
           input.bill-input {
             flex: 1;
             max-width: 100%;
             background: transparent;
-            padding: 15px 0;
+            padding: 12px 0;
             text-align: right;
             font-weight: 700;
             font-size: 20px;
@@ -76,13 +76,13 @@ div.container {
         }
 
         div.tip-percent-container {
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           display: grid;
           grid-template-columns: 1fr 1fr;
           grid-gap: 20px;
           button.percent,
           button.custom {
-            padding: 12px;
+            padding: 10px;
             background: $very-dark-cyan;
             color: $white;
             font-size: 20px;
@@ -130,6 +130,28 @@ div.container {
             background: $primary-color;
             font-weight: bold;
             border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  div.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    div.tip-container {
+      div.splitter {
+        display: grid;
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 20px;
+        section.container-left {
+          div.tip-percent-container {
+            grid-template-columns: repeat(3, 1fr);
           }
         }
       }

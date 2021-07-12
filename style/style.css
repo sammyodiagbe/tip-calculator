@@ -44,7 +44,7 @@ div.container div.tip-container div.splitter {
 div.container div.tip-container div.splitter section.container-left label.input-label {
   display: block;
   font-size: 14px;
-  padding: 20px 0;
+  padding: 12px 0;
   font-weight: 700;
   color: #7f9c9f;
 }
@@ -54,7 +54,7 @@ div.container div.tip-container div.splitter section.container-left label.input-
 }
 
 div.container div.tip-container div.splitter section.container-left div.input-container {
-  background: #f4fafa;
+  background: #efefef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +63,7 @@ div.container div.tip-container div.splitter section.container-left div.input-co
           align-items: center;
   padding: 0 15px;
   padding-right: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 div.container div.tip-container div.splitter section.container-left div.input-container input.bill-input {
@@ -72,7 +72,7 @@ div.container div.tip-container div.splitter section.container-left div.input-co
           flex: 1;
   max-width: 100%;
   background: transparent;
-  padding: 15px 0;
+  padding: 12px 0;
   text-align: right;
   font-weight: 700;
   font-size: 20px;
@@ -80,7 +80,7 @@ div.container div.tip-container div.splitter section.container-left div.input-co
 }
 
 div.container div.tip-container div.splitter section.container-left div.tip-percent-container {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -90,7 +90,7 @@ div.container div.tip-container div.splitter section.container-left div.tip-perc
 
 div.container div.tip-container div.splitter section.container-left div.tip-percent-container button.percent,
 div.container div.tip-container div.splitter section.container-left div.tip-percent-container button.custom {
-  padding: 12px;
+  padding: 10px;
   background: #00494d;
   color: white;
   font-size: 20px;
@@ -145,5 +145,32 @@ div.container div.tip-container div.splitter section.container-right div.reset-c
   background: #26c0ab;
   font-weight: bold;
   border-radius: 5px;
+}
+
+@media screen and (min-width: 1000px) {
+  div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 20px;
+  }
+  div.container div.tip-container div.splitter {
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 20px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+  }
+  div.container div.tip-container div.splitter section.container-left div.tip-percent-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 /*# sourceMappingURL=style.css.map */
