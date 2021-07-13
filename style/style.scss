@@ -53,6 +53,10 @@ div.container {
           &.sl {
             margin-top: 30px;
           }
+          span {
+            font-size: 10px;
+            color: red;
+          }
         }
 
         div.input-container {
@@ -62,6 +66,10 @@ div.container {
           padding: 0 15px;
           padding-right: 30px;
           margin-bottom: 10px;
+          border-radius: 5px;
+          &.error {
+            border: 1px solid red;
+          }
           img.input-icon {
           }
           input.bill-input {
@@ -74,6 +82,18 @@ div.container {
             font-size: 20px;
             color: $very-dark-cyan;
             border-radius: 5px;
+            appearance: none;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+            /* Firefox */
+            &[type="number"] {
+              -moz-appearance: textfield;
+            }
           }
         }
 
@@ -107,7 +127,7 @@ div.container {
         background-color: $very-dark-cyan;
         padding: 30px;
         border-radius: 20px;
-        position: relative;
+
         div.flex {
           padding: 10px 0;
           display: flex;
@@ -125,11 +145,6 @@ div.container {
         }
 
         div.reset-container {
-          position: absolute;
-          left: 30px;
-          bottom: 20px;
-          width: calc(100% - 60px);
-
           button.reset {
             padding: 10px;
             font-size: 16px;
@@ -165,7 +180,12 @@ div.container {
 
         section.container-right {
           position: relative;
+          position: relative;
           div.reset-container {
+            position: absolute;
+            left: 30px;
+            bottom: 20px;
+            width: calc(100% - 60px);
           }
         }
       }

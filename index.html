@@ -12,10 +12,12 @@
         <img src="./assets/logo.svg" alt="logo" class="logo" />
         <div class="splitter">
           <section class="container-left">
-            <label class="input-label">Bill</label>
-            <div class="input-container">
+            <label class="input-label"
+              >Bill <span id="bill-error"></span
+            ></label>
+            <div class="input-container" id="binput">
               <img src="./assets/icon-dollar.svg" class="input-icon" />
-              <input type="text" id="bill-input" class="bill-input" />
+              <input type="number" id="bill-input" class="bill-input" min="0" />
             </div>
 
             <label class="input-label sl">Select Tip %</label>
@@ -27,10 +29,17 @@
               <button href="#" data-value="25" class="percent">25%</button>
               <button href="#" class="custom">custom</button>
             </div>
-            <label class="input-label">Number of People</label>
-            <div class="input-container">
+            <label class="input-label"
+              >Number of People <span id="people-error"></span
+            ></label>
+            <div class="input-container" id="pinput">
               <img src="./assets/icon-person.svg" class="input-icon" />
-              <input type="text" id="people-input" class="bill-input" />
+              <input
+                type="number"
+                id="people-input"
+                class="bill-input"
+                min="0"
+              />
             </div>
           </section>
           <section class="container-right">
@@ -49,11 +58,12 @@
               <h1 class="amount" id="tip-amount">$32.79</h1>
             </div>
             <div class="reset-container">
-              <button class="reset" id="reset">Reset</button>
+              <button class="reset" id="action-btn">Reset</button>
             </div>
           </section>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="./js/script.js"></script>
   </body>
 </html>
