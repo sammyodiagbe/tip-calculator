@@ -6,6 +6,8 @@ const pContainer = document.querySelector("#pinput");
 const bContainer = document.querySelector("#binput");
 const tipPerPerson = document.querySelector("#tip-amount");
 const totalPerPerson = document.querySelector("#t-amount");
+const customPercent = document.querySelector("#custom-percent");
+
 let bill = 0;
 let people = 0;
 let tipPercent = 10;
@@ -61,14 +63,44 @@ function calculate() {
   if (!billval || !peopleval || !tipPercent) {
     tipPerPerson.innerHTML = "$0.00";
     totalPerPerson.innerHTML = "$0.00";
+    actionButton.classList.add("disabled");
     return;
   }
+  actionButton.classList.remove("disabled");
   let percentPerhead = (tipPercent / 100) * billval;
   let amtPerHead = billval / peopleval;
   tipPerPerson.innerHTML = `$${percentPerhead.toFixed(2)}`;
   totalPerPerson.innerHTML = `${amtPerHead.toFixed(2)}`;
 }
 
+customPercent.addEventListener("keyup", (event) => {
+  for (let b = 0; b < tipsButtons.length; b++) {
+    if (tipsButtons[b].classList.contains("active")) {
+      tipsButtons[b].classList.remove("active");
+      break;
+    }
+  }
+  tipPercent = event.target.value;
+  calculate();
+});
+
 actionButton.addEventListener("click", (event) => {
-  const billValue = Number(billInput.value);
+  billInput.value = "";
+  numberOfPeople.value = "";
+  customPercent.value = "";
+  tipPercent = 0;
+  bill = 0;
+  people = 0;
+  tipPercent = 10;
+  tipAmountPerPerson = 0;
+  totalAmountPerPerson = 0;
+  for (let b = 0; b < tipsButtons.length; b++) {
+    if (tipsButtons[b].classList.contains("active")) {
+      tipsButtons[b].classList.remove("active");
+      break;
+    }
+  }
+  tipPerPerson.innerHTML = "$0.00";
+  totalPerPerson.innerHTML = "$0.00";
+  actionButton.classList.add("disabled");
 });

@@ -13,6 +13,7 @@ $white: hsl(0, 0%, 100%);
   outline: none;
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
+  transition: all 300ms;
 }
 
 body {
@@ -33,7 +34,6 @@ div.container {
       display: block;
       margin: 0 auto;
       margin-bottom: 40px;
-      width: 100px;
     }
 
     div.splitter {
@@ -50,12 +50,17 @@ div.container {
           padding: 10px 0;
           font-weight: 700;
           color: $dark-greyish-cyan;
+          position: relative;
           &.sl {
             margin-top: 30px;
           }
           span {
             font-size: 10px;
             color: red;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
           }
         }
 
@@ -67,6 +72,10 @@ div.container {
           padding-right: 30px;
           margin-bottom: 10px;
           border-radius: 5px;
+          border: 1px solid transparent;
+          &:hover {
+            border: 1px solid $primary-color;
+          }
           &.error {
             border: 1px solid red;
           }
@@ -178,6 +187,10 @@ div.container {
             background: $primary-color;
             font-weight: bold;
             border-radius: 5px;
+
+            &.disabled {
+              opacity: 0.5;
+            }
           }
         }
       }

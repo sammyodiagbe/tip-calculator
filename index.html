@@ -17,7 +17,7 @@
             ></label>
             <div class="input-container" id="binput">
               <img src="./assets/icon-dollar.svg" class="input-icon" />
-              <input type="number" id="bill-input" class="bill-input" min="0" />
+              <input type="number" id="bill-input" class="bill-input" min="0" placeholder="0"/>
             </div>
 
             <label class="input-label sl">Select Tip %</label>
@@ -27,7 +27,7 @@
               <button href="#" data-value="15" class="percent">15%</button>
               <button href="#" data-value="20" class="percent">20%</button>
               <button href="#" data-value="25" class="percent">25%</button>
-              <input type="number" class="custom" placeholder="Custom">custom</button>
+              <input type="number" class="custom" placeholder="Custom" id="custom-percent">custom</button>
             </div>
             <label class="input-label"
               >Number of People <span id="people-error"></span
@@ -39,6 +39,7 @@
                 id="people-input"
                 class="bill-input"
                 min="0"
+                placeholder="0"
               />
             </div>
           </section>
@@ -58,7 +59,7 @@
               <h1 class="amount" id="t-amount">$0.00</h1>
             </div>
             <div class="reset-container">
-              <button class="reset" id="action-btn">Reset</button>
+              <button class="reset disabled" id="action-btn" >Reset</button >
             </div>
           </section>
         </div>
