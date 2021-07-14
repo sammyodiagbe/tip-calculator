@@ -152,6 +152,7 @@ div.container div.tip-container div.splitter section.container-left div.tip-perc
   text-align: right;
   font-size: 16px;
   font-weight: bold;
+  border-radius: 5px;
   /* Firefox */
 }
 
@@ -164,7 +165,7 @@ div.container div.tip-container div.splitter section.container-left div.tip-perc
   -moz-appearance: textfield;
 }
 
-div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom:hover, div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom:focus {
+div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom:focus {
   border: 2px solid #26c0ab;
   border-radius: 5px;
 }
