@@ -70,7 +70,7 @@ function calculate() {
   let percentPerhead = (tipPercent / 100) * billval;
   let amtPerHead = billval / peopleval;
   tipPerPerson.innerHTML = `$${percentPerhead.toFixed(2)}`;
-  totalPerPerson.innerHTML = `${amtPerHead.toFixed(2)}`;
+  totalPerPerson.innerHTML = `${(amtPerHead + percentPerhead).toFixed(2)}`;
 }
 
 customPercent.addEventListener("keyup", (event) => {
