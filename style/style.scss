@@ -100,7 +100,7 @@ div.container {
         div.tip-percent-container {
           margin-bottom: 10px;
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
           grid-gap: 20px;
           button.percent,
           button.custom {
@@ -111,14 +111,38 @@ div.container {
             border-radius: 5px;
             font-weight: 700;
 
+            &.active {
+              background: $primary-color;
+            }
+
             &:hover {
               background: $primary-color;
             }
           }
 
-          button.custom {
+          input.custom {
             background: #eee;
             color: $very-dark-cyan;
+            // padding: 8px;
+            padding: 0 8px;
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+            /* Firefox */
+            &[type="number"] {
+              -moz-appearance: textfield;
+            }
+            &:hover,
+            &:focus {
+              border: 2px solid $primary-color;
+              border-radius: 5px;
+            }
           }
         }
       }
@@ -164,17 +188,18 @@ div.container {
 @media screen and (min-width: 1000px) {
   div.container {
     display: flex;
-    align-items: center;
+    padding-top: 100px;
     justify-content: center;
     div.tip-container {
       div.splitter {
         display: grid;
+        max-width: 800px;
         grid-column-gap: 20px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 400px 300px;
         border-radius: 20px;
         section.container-left {
           div.tip-percent-container {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
           }
         }
 

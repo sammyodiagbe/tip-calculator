@@ -108,8 +108,8 @@ div.container div.tip-container div.splitter section.container-left div.tip-perc
   margin-bottom: 10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 20px;
 }
 
@@ -123,14 +123,38 @@ div.container div.tip-container div.splitter section.container-left div.tip-perc
   font-weight: 700;
 }
 
+div.container div.tip-container div.splitter section.container-left div.tip-percent-container button.percent.active,
+div.container div.tip-container div.splitter section.container-left div.tip-percent-container button.custom.active {
+  background: #26c0ab;
+}
+
 div.container div.tip-container div.splitter section.container-left div.tip-percent-container button.percent:hover,
 div.container div.tip-container div.splitter section.container-left div.tip-percent-container button.custom:hover {
   background: #26c0ab;
 }
 
-div.container div.tip-container div.splitter section.container-left div.tip-percent-container button.custom {
+div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom {
   background: #eee;
   color: #00494d;
+  padding: 0 8px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  /* Firefox */
+}
+
+div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom::-webkit-outer-spin-button, div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom[type="number"] {
+  -moz-appearance: textfield;
+}
+
+div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom:hover, div.container div.tip-container div.splitter section.container-left div.tip-percent-container input.custom:focus {
+  border: 2px solid #26c0ab;
+  border-radius: 5px;
 }
 
 div.container div.tip-container div.splitter section.container-right {
@@ -178,9 +202,7 @@ div.container div.tip-container div.splitter section.container-right div.reset-c
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding-top: 100px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -188,14 +210,15 @@ div.container div.tip-container div.splitter section.container-right div.reset-c
   div.container div.tip-container div.splitter {
     display: -ms-grid;
     display: grid;
+    max-width: 800px;
     grid-column-gap: 20px;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 400px 300px;
+        grid-template-columns: 400px 300px;
     border-radius: 20px;
   }
   div.container div.tip-container div.splitter section.container-left div.tip-percent-container {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (minmax(0, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   div.container div.tip-container div.splitter section.container-right {
     position: relative;
